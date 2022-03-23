@@ -120,6 +120,14 @@ ifeq ($(CONFIG_FIRMWARE_INCLUDE_LANG_CN),y)
 	sed $(DWURL_PATTERN) -i $(ROMFS_DIR)/www/CN.dict
 	sed $(DWURL_MOD_PATTERN) -i $(ROMFS_DIR)/www/CN.dict
 endif
+ifeq ($(CONFIG_FIRMWARE_INCLUDE_LANG_VI),y)
+	echo "LANG_VI=Tiếng Việt" >> $(ROMFS_DIR)/www/EN.header
+	cp dict/VI.dict $(ROMFS_DIR)/www
+	sed $(BOARD_PATTERN) -i $(ROMFS_DIR)/www/VI.dict
+	sed $(COPYR_PATTERN) -i $(ROMFS_DIR)/www/VI.dict
+	sed $(DWURL_PATTERN) -i $(ROMFS_DIR)/www/VI.dict
+	sed $(DWURL_MOD_PATTERN) -i $(ROMFS_DIR)/www/VI.dict
+endif
 	cat $(ROMFS_DIR)/www/EN.header dict/EN.footer > $(ROMFS_DIR)/www/EN.dict
 	sed $(BOARD_PATTERN) -i $(ROMFS_DIR)/www/EN.dict
 	sed $(COPYR_PATTERN) -i $(ROMFS_DIR)/www/EN.dict
