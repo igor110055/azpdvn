@@ -1125,7 +1125,7 @@ function simplyMAC(fullMAC){
                                             </td>
                                         </tr>
                                         <tr id="pppoemwan4">
-					<th width="30%" style="border-top: 0 none;">启用多拨(兼容HWNAT)</th>
+					<th width="30%" style="border-top: 0 none;">Bật MultiWAN (HWNAT)</th>
 												  						     <td style="border-top: 0 none;">
 													<div class="main_itoggle">
 													<div id="pppoemwan_enable_on_of">
@@ -1140,7 +1140,7 @@ function simplyMAC(fullMAC){
 
 					</tr>
                                         <tr id="pppoemwan3">
-					<th width="30%" style="border-top: 0 none;">并发多拨</th>
+					<th width="30%" style="border-top: 0 none;">Quay PPPoE ảo</th>
 												  						     <td style="border-top: 0 none;">
 													<div class="main_itoggle">
 													<div id="pppoesync_enable_on_of">
@@ -1155,13 +1155,13 @@ function simplyMAC(fullMAC){
 
 					</tr>
 					<tr id="pppoemwan2" >
-										<th>多拨次数</th>
+										<th>Số lượng PPPoE</th>
 				<td>
 					<input type="text" class="input" name="pppoe_num" id="pppoe_num" style="width: 100px" value="<% nvram_get_x("","pppoe_num"); %>" />
 				</td>   
 					</tr>
 					<tr id="pppoemwan1" >
-					 <th width="30%" style="border-top: 0 none;">内网IP分流控制</th>
+					 <th width="30%" style="border-top: 0 none;">Kiểm soát luồng truy cập theo IP</th>
                                              <td style="border-top: 0 none;">
                                                 <div class="main_itoggle">
                                                     <div id="pppoemwan_rules_x_on_of">
@@ -1186,7 +1186,7 @@ function simplyMAC(fullMAC){
                                                 <#LANHostConfig_ManualName_itemname#> <a href="javascript:sortbyName();" style="outline:0;"><i class="icon-circle-arrow-down"></i></a>
                                             </th>
 					    <th width="20%">
-                                                出口序号(1开始) <a href="javascript:sortbyName();" style="outline:0;"><i class="icon-circle-arrow-down"></i></a>
+                                                Line PPPoE (1,2,3,...) <a href="javascript:sortbyName();" style="outline:0;"><i class="icon-circle-arrow-down"></i></a>
                                             </th>
                                             <th width="5%">
                                                 <center><a href="javascript:sortbyId();" style="outline:0;"><i class="icon-th-list"></i></a></center>
@@ -1219,7 +1219,7 @@ function simplyMAC(fullMAC){
                                             </td>
                                         </tr>
                                         <tr id="pppoemwan0">
-					<th width="30%" style="border-top: 0 none;">禁用443负载均衡（避免影响网页浏览，可能影响测速）</th>
+					<th width="30%" style="border-top: 0 none;">Tắt cân bằng tải HTTPS (Fix lỗi Timeout)</th>
 												  						     <td style="border-top: 0 none;">
 													<div class="main_itoggle">
 													<div id="pppoemwan_443_on_of">
