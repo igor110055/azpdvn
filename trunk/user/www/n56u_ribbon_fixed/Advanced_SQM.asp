@@ -202,16 +202,16 @@ function getHash(){
                                             </td>
                                         </tr>
                                             <tr>
-                                                <th>Tuỳ chỉnh</th>
+                                                <th>Tuỳ chỉnh (nếu có)</th>
                                                 <td>
                                                     <input type="text" maxlength="10" class="input" size="10" name="sqm_active" value="<% nvram_get_x("","sqm_active"); %>"/>
                                                 </td>
                                                 <td>
-                                                    &nbsp;<span style="color:#888;">Cần chọn "Tùy chỉnh" trong menu và điền vào chỗ trống, ví dụ: ra0</span>
+                                                    &nbsp;<span style="color:#888;">Ví dụ: ra0</span>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <th>Điều tiết băng thông</th>
+                                                <th>Chế độ kiểm soát</th>
                                                 <td>
                                                     <select name="sqm_qdisc" class="input">
                                                         <option value="fq_codel" <% nvram_match_x("","sqm_qdisc", "fq_codel","selected"); %>>fq_codel (*)</option>
@@ -222,7 +222,7 @@ function getHash(){
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <th>Tập tin điều tiết</th>
+                                                <th>Mức độ độ kiểm soát</th>
                                                 <td>
                                                     <select name="sqm_script" class="input">
                                                         <option value="simple.qos" <% nvram_match_x("","sqm_script", "simple.qos","selected"); %>>simple (*)</option>
@@ -248,7 +248,7 @@ function getHash(){
                                                     <input type="text" maxlength="10" class="input" size="10" id="sqm_up_speed" name="sqm_up_speed" value="<% nvram_get_x("","sqm_up_speed"); %>"/>
                                                 </td>
                                                 <td>
-                                                    &nbsp;<span style="color:#888;">Tốc độ 80-95％，1 Mbps = 1024 kbit/s, nên điền giá trị nhỏ hơn thực tế </span>
+                                                    &nbsp;<span style="color:#888;">Tối ưu 80-95%</span>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -283,7 +283,7 @@ function getHash(){
                                                     </select>
                                                 </td>
                                                 <td>
-                                                    &nbsp;<span style="color:#888;">仅调试时启用debug/trace</span>
+                                                    &nbsp;<span style="color:#888;">Chỉ bật khi dùng debug/trace</span>
                                                 </td>
                                             </tr>
                 </table>
@@ -320,18 +320,18 @@ function getHash(){
             </div>
             <div class="modal-body">
                 <div>
-                    <span style="display: inline-block; width:68px;">带宽</span>:<input type="text" class="span2" style="margin: 1px 5px;" id="bw_in_Mbps" value="10">Mbps
+                    <span style="display: inline-block; width:68px;">Băng thông</span>:<input type="text" class="span2" style="margin: 1px 5px;" id="bw_in_Mbps" value="10">Mbps
                 </div>
                 <div>
-                    <span style="display: inline-block; width:68px;">百分比</span>:<input type="text" class="span2" style="margin: 1px 5px;" id="bw_percent" value="95"> %
+                    <span style="display: inline-block; width:68px;">Tỷ lệ</span>:<input type="text" class="span2" style="margin: 1px 5px;" id="bw_percent" value="95"> %
                 </div>
                 <div>
-                    <span style="display: inline-block; width:68px;">结果</span>:<input type="text" readonly class="span2" style="margin: 1px 5px;" id="bw_result" value=""> kbit/s
+                    <span style="display: inline-block; width:68px;">Kết quả</span>:<input type="text" readonly class="span2" style="margin: 1px 5px;" id="bw_result" value=""> kbit/s
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" id="bw_set_down_action" class="btn btn-primary">设置下载速度</button>
-                <button type="button" id="bw_set_up_action" class="btn btn-primary">设置上传速度</button>
+                <button type="button" id="bw_set_down_action" class="btn btn-primary">Đặt làm tốc độ tải xuống</button>
+                <button type="button" id="bw_set_up_action" class="btn btn-primary">Đặt làm tốc độ tải lên</button>
             </div>
         </div>
     </div>
