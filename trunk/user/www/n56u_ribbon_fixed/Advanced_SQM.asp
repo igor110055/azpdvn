@@ -1,4 +1,4 @@
-<!--本页面文件部分内容提取自灯大固件-->
+<!--KKLM-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -157,10 +157,11 @@ function getHash(){
                                     <div class="row-fluid">
                                         <div id="tabMenu" class="submenuBlock"></div>
                                         <div class="alert alert-info" style="margin: 10px;">
-                          注意:SQM会自动设置相应的HWNAT规则，请勿自行调整WAN页面的HWNAT选项造成流控失效</br>
-				因7621性能所限,大于500M宽带谨慎开启QOS！</br>
-            通过SQM_QoS您可以：对指定接口流量整形,例如自定义5G访客网络。其他接口如5G主接口不会受到影响。</br>
-                                       访客网络接口名称视机型而定，5G访客：ra1(或rai1） 2.4G访客rax1(或ra1)。
+                          Lưu ý: SQM sẽ tự động chỉnh sửa các thông số HWNAT tương ứng，vui lòng không chỉnh sửa mục HWNAT trong cài đặt WAN để tránh xung đột</br>
+				Do hiệu suất của CPU MT7621, thận trọng khi sử dụng SQM với băng thông lớn hơn 500mb/s!</br>
+            Với SQM, bạn có thể: Giới hạn lưu lượng truy cập trên một băng tần cụ thể, chẳng hạn như tùy chỉnh wifi khách 5GHz. Các wifi khác như 5GHz chính sẽ không bị ảnh hưởng.</br>
+                                       Tên của wifi khách tùy thuộc vào kiểu máy, Khách 5GHz: ra1 (hoặc rai1), Khách 2.4GHz: rax1 (hoặc ra1).</br>
+				       TLDR (Tác giả): Tính năng dành cho ae sử dụng internet băng thông dưới mức trung bình khá, nhằm khắc phục tình trạng sụt tốc khi có thằng nào dùng chùa tải sex.
                                         </div>
                                    </div>
 
@@ -174,7 +175,7 @@ function getHash(){
                                             </td>
                                             </tr>
                                             <tr>
-                                                <th>启用SQM</th>
+                                                <th>Bật SQM</th>
                                                 <td colspan="2">
                                                     <div class="main_itoggle">
                                                         <div id="sqm_enable_on_of">
@@ -190,27 +191,27 @@ function getHash(){
                                                 </td>
                                             </tr>
                                               <tr>
-                                            <th>流控对象</th>
+                                            <th>Kiểm soát lưu lượng truy cập</th>
                                             <td>
                                                 <select name="sqm_flag" class="input">
-                                                    <option value="1" <% nvram_match_x("", "sqm_flag", "1", "selected"); %>>仅有线到外网</option>
-                                                    <option value="2" <% nvram_match_x("", "sqm_flag", "2", "selected"); %>>仅无线到外网</option>
-                                                    <option value="3" <% nvram_match_x("", "sqm_flag", "3", "selected"); %>>有线到外网+无线到外网</option>
-                                                    <option value="4" <% nvram_match_x("", "sqm_flag", "4", "selected"); %>>自定义接口</option>
+                                                    <option value="1" <% nvram_match_x("", "sqm_flag", "1", "selected"); %>>Chỉ có dây</option>
+                                                    <option value="2" <% nvram_match_x("", "sqm_flag", "2", "selected"); %>>Chỉ không dây</option>
+                                                    <option value="3" <% nvram_match_x("", "sqm_flag", "3", "selected"); %>>Cả hai</option>
+                                                    <option value="4" <% nvram_match_x("", "sqm_flag", "4", "selected"); %>>Tuỳ chỉnh</option>
                                                 </select>
                                             </td>
                                         </tr>
                                             <tr>
-                                                <th>自定义接口</th>
+                                                <th>Tuỳ chỉnh</th>
                                                 <td>
                                                     <input type="text" maxlength="10" class="input" size="10" name="sqm_active" value="<% nvram_get_x("","sqm_active"); %>"/>
                                                 </td>
                                                 <td>
-                                                    &nbsp;<span style="color:#888;">上项菜单需选择“自定义接口“ 可填写例如:ra0</span>
+                                                    &nbsp;<span style="color:#888;">Cần chọn "Tùy chỉnh" trong menu và điền vào chỗ trống, ví dụ: ra0</span>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <th>队列规则</th>
+                                                <th>Điều tiết băng thông</th>
                                                 <td>
                                                     <select name="sqm_qdisc" class="input">
                                                         <option value="fq_codel" <% nvram_match_x("","sqm_qdisc", "fq_codel","selected"); %>>fq_codel (*)</option>
@@ -221,7 +222,7 @@ function getHash(){
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <th>队列脚本</th>
+                                                <th>Tập tin điều tiết</th>
                                                 <td>
                                                     <select name="sqm_script" class="input">
                                                         <option value="simple.qos" <% nvram_match_x("","sqm_script", "simple.qos","selected"); %>>simple (*)</option>
@@ -233,7 +234,7 @@ function getHash(){
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <th width="32%">宽带下载速度 (<span class="label label-info">kbit/s</span>)</th>
+                                                <th width="32%">Tốc độ tải xuống (<span class="label label-info">kbit/s</span>)</th>
                                                 <td>
                                                     <input type="text" maxlength="10" class="input" size="10" id="sqm_down_speed" name="sqm_down_speed" value="<% nvram_get_x("","sqm_down_speed"); %>"/>
                                                 </td>
@@ -242,16 +243,16 @@ function getHash(){
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <th width="32%">宽带上传速度 (<span class="label label-info">kbit/s</span>)</th>
+                                                <th width="32%">Tốc độ tải lên (<span class="label label-info">kbit/s</span>)</th>
                                                 <td>
                                                     <input type="text" maxlength="10" class="input" size="10" id="sqm_up_speed" name="sqm_up_speed" value="<% nvram_get_x("","sqm_up_speed"); %>"/>
                                                 </td>
                                                 <td>
-                                                    &nbsp;<span style="color:#888;">测速的80-95％，1 Mbps = 1024 kbit/s 需填写小于下载速度的值</span>
+                                                    &nbsp;<span style="color:#888;">Tốc độ 80-95％，1 Mbps = 1024 kbit/s, nên điền giá trị nhỏ hơn thực tế </span>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <th>启用日志</th>
+                                                <th>Cho phép ghi lại nhật ký</th>
                                                 <td>
                                                     <div class="main_itoggle">
                                                         <div id="sqm_debug_log_on_of">
@@ -270,7 +271,7 @@ function getHash(){
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <th>日志等级</th>
+                                                <th>Mức độ ghi lại</th>
                                                 <td>
                                                     <select name="sqm_log_level" class="input">
                                                         <option value="0" <% nvram_match_x("","sqm_log_level", "0","selected"); %>>silent</option>
