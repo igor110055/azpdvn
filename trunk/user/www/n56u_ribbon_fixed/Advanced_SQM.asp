@@ -194,9 +194,9 @@ function getHash(){
                                             <th>Kiểm soát lưu lượng truy cập</th>
                                             <td>
                                                 <select name="sqm_flag" class="input">
-                                                    <option value="1" <% nvram_match_x("", "sqm_flag", "1", "selected"); %>>Chỉ có dây</option>
-                                                    <option value="2" <% nvram_match_x("", "sqm_flag", "2", "selected"); %>>Chỉ không dây</option>
-                                                    <option value="3" <% nvram_match_x("", "sqm_flag", "3", "selected"); %>>Cả hai</option>
+                                                    <option value="1" <% nvram_match_x("", "sqm_flag", "1", "selected"); %>>Chỉ WAN</option>
+                                                    <option value="2" <% nvram_match_x("", "sqm_flag", "2", "selected"); %>>Chỉ Wifi</option>
+                                                    <option value="3" <% nvram_match_x("", "sqm_flag", "3", "selected"); %>>WAN+Wifi</option>
                                                     <option value="4" <% nvram_match_x("", "sqm_flag", "4", "selected"); %>>Tuỳ chỉnh</option>
                                                 </select>
                                             </td>
@@ -239,7 +239,7 @@ function getHash(){
                                                     <input type="text" maxlength="10" class="input" size="10" id="sqm_down_speed" name="sqm_down_speed" value="<% nvram_get_x("","sqm_down_speed"); %>"/>
                                                 </td>
                                                 <td>
-                                                    <a href="#bw_calc_dialog" class="btn btn-info" data-toggle="modal">速度计算器</a>
+                                                    <a href="#bw_calc_dialog" class="btn btn-info" data-toggle="modal">Tự động tính</a>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -316,7 +316,7 @@ function getHash(){
                 <button type="button" class="close" data-dismiss="modal">
                     <span aria-hidden="true">&times;</span>
                 </button>
-                <h4 class="modal-title">SQM QoS 速度计算器</h4>
+                <h4 class="modal-title">Tự động tính băng thông</h4>
             </div>
             <div class="modal-body">
                 <div>
