@@ -161,7 +161,7 @@ function getHash(){
 				Do hiệu suất của CPU MT7621, thận trọng khi sử dụng SQM với băng thông lớn hơn 500mb/s!</br>
             Với SQM, bạn có thể: Giới hạn lưu lượng truy cập trên một băng tần cụ thể, chẳng hạn như tùy chỉnh wifi khách 5GHz. Các wifi khác như 5GHz chính sẽ không bị ảnh hưởng.</br>
                                        Tên của wifi khách tùy thuộc vào kiểu máy, Khách 5GHz: ra1 (hoặc rai1), Khách 2.4GHz: rax1 (hoặc ra1).</br>
-				       TLDR (Tác giả): Tính năng dành cho ae sử dụng internet băng thông dưới mức trung bình khá, nhằm khắc phục tình trạng sụt tốc khi có thằng nào dùng chùa tải sex.
+				       TLDR: Tính năng dành cho ae sử dụng internet băng thông ở mức trung bình khá, nhằm khắc phục tình trạng sụt tốc/nhảy ping khi có thằng xem sex.
                                         </div>
                                    </div>
 
