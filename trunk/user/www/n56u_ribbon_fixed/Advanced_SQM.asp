@@ -194,9 +194,9 @@ function getHash(){
                                             <th>Kiểm soát lưu lượng truy cập</th>
                                             <td>
                                                 <select name="sqm_flag" class="input">
-                                                    <option value="1" <% nvram_match_x("", "sqm_flag", "1", "selected"); %>>Chỉ WAN</option>
-                                                    <option value="2" <% nvram_match_x("", "sqm_flag", "2", "selected"); %>>Chỉ Wifi</option>
-                                                    <option value="3" <% nvram_match_x("", "sqm_flag", "3", "selected"); %>>WAN+Wifi</option>
+                                                    <option value="1" <% nvram_match_x("", "sqm_flag", "1", "selected"); %>>Thiết bị có dây</option>
+                                                    <option value="2" <% nvram_match_x("", "sqm_flag", "2", "selected"); %>>Thiết bị không dây</option>
+                                                    <option value="3" <% nvram_match_x("", "sqm_flag", "3", "selected"); %>>Cả hai</option>
                                                     <option value="4" <% nvram_match_x("", "sqm_flag", "4", "selected"); %>>Tuỳ chỉnh</option>
                                                 </select>
                                             </td>
