@@ -211,7 +211,7 @@ function getHash(){
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <th>Chế độ kiểm soát</th>
+                                                <th>Thuật toán kiểm soát</th>
                                                 <td>
                                                     <select name="sqm_qdisc" class="input">
                                                         <option value="fq_codel" <% nvram_match_x("","sqm_qdisc", "fq_codel","selected"); %>>fq_codel (*)</option>
@@ -222,7 +222,7 @@ function getHash(){
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <th>Mức độ độ kiểm soát</th>
+                                                <th>Mức độ kiểm soát</th>
                                                 <td>
                                                     <select name="sqm_script" class="input">
                                                         <option value="simple.qos" <% nvram_match_x("","sqm_script", "simple.qos","selected"); %>>simple (*)</option>
@@ -271,7 +271,7 @@ function getHash(){
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <th>Mức độ ghi lại</th>
+                                                <th>Phạm vi lưu trữ</th>
                                                 <td>
                                                     <select name="sqm_log_level" class="input">
                                                         <option value="0" <% nvram_match_x("","sqm_log_level", "0","selected"); %>>silent</option>
