@@ -138,7 +138,7 @@ function done_validating(action){
 
 									<table width="100%" align="center" cellpadding="4" cellspacing="0" class="table">
 										<tr>
-											<th width="30%" style="border-top: 0 none;">启用AdGuardHome</th>
+											<th width="30%" style="border-top: 0 none;">Sử dụng AdGuardHome</th>
 											<td style="border-top: 0 none;">
 													<div class="main_itoggle">
 													<div id="adg_enable_on_of">
